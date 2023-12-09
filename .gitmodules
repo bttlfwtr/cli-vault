@@ -1,0 +1,6 @@
+[submodule "externals/googletest"]
+	path = externals/googletest
+	url = https://github.com/google/googletest
+[submodule "externals/cryptopp"]
+	path = externals/cryptopp
+	url = https://github.com/weidai11/cryptopp.git
