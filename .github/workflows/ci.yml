@@ -1,4 +1,4 @@
-name: cli-lock-ci
+name: cli-vault-ci
 
 on:
           push:

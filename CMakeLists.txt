@@ -12,6 +12,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_executable(cli-vault
 
+          ./src/main.cpp
 
 )
 
@@ -21,4 +22,4 @@ add_custom_target(cleanbuild
           COMMENT "removing previous build artifacts..."
 )
 
-add_dependencies()
+add_dependencies(cli-vault cleanbuild)
