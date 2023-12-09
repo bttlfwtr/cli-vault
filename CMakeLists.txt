@@ -12,8 +12,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 file(GLOB project-sources
 
-          "${PROJECT_SOURCE_DIR}/src/*.cpp"
-          "${PROJECT_SOURCE_DIR}/src/*.hpp"
+          "${CMAKE_SOURCE_DIR}/src/*.cpp"
+          "${CMAKE_SOURCE_DIR}/src/*.hpp"
 )
 
 add_executable(cli-vault
