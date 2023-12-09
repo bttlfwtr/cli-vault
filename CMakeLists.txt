@@ -10,15 +10,20 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -Wcast-align -Wcast-qual -Wcon
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_subdirectory(./src)
+file(GLOB project-sources
 
-# add_executable(cli-vault
+          "${PROJECT_SOURCE_DIR}/src/*.cpp"
+          "${PROJECT_SOURCE_DIR}/src/*.hpp"
+)
 
-#           ./src/main.cpp
+add_executable(cli-vault
 
-# )
+          ./src/main.cpp
+          ${project-sources}
+)
 
 add_custom_target(cleanbuild
+
           COMMAND ${CMAKE_MAKE_PROGRAM} clean
           WORKING_DIRECTORY ${CMAKE_BINARY_DIR} # current CMakeFiles dir
           COMMENT "removing previous build artifacts..."
