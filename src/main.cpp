@@ -1,8 +1,9 @@
-#include <iostream>
+#include "password_manager.hpp"
 
-int main(int argc, const char** argv)
+int main(int argc, const char** argv) // pointer to argument pointers thus an array of pointers
 {
-          std::cout << "test github actions ci\n";
+          PasswordManager* pwManager{new PasswordManager};
+          pwManager->RUN_CLI_VAULT();
 
           return 0;
 }

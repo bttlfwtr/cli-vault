@@ -10,11 +10,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -Wcast-align -Wcast-qual -Wcon
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_executable(cli-vault
+add_subdirectory(./src)
 
-          ./src/main.cpp
+# add_executable(cli-vault
 
-)
+#           ./src/main.cpp
+
+# )
 
 add_custom_target(cleanbuild
           COMMAND ${CMAKE_MAKE_PROGRAM} clean
