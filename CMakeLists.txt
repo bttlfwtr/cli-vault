@@ -18,7 +18,6 @@ file(GLOB project-sources
 
 add_executable(cli-vault
 
-          ./src/main.cpp
           ${project-sources}
 )
 
