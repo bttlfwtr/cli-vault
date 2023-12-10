@@ -5,6 +5,9 @@
 
 struct PasswordManager
 {
+          PasswordManager();
+          ~PasswordManager();
+
           void RUN_CLI_VAULT();
 };
 

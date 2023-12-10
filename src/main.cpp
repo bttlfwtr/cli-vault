@@ -4,6 +4,7 @@ int main(int argc, const char** argv) // pointer to argument pointers thus an ar
 {
           PasswordManager* pwManager{new PasswordManager};
           pwManager->RUN_CLI_VAULT();
+          delete pwManager;
 
           return 0;
 }
