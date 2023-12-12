@@ -1,0 +1,2 @@
+convert iostream objects to cout and cin or getline for prod
+swap compiler flags in CMake
