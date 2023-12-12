@@ -1,2 +1,3 @@
+change external fetching solutions from git submodules to CMake https://cmake.org/cmake/help/latest/module/FetchContent.html
 convert iostream objects to cout and cin or getline for prod
 swap compiler flags in CMake
