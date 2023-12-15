@@ -7,8 +7,20 @@ void PrintHandler::PrintMenu(std::ostream& outStringStream)
                     << "(M)odify\n"     // : modify existing item information
                     << "(D)elete\n"     // : delete item from domain
                     << "(E)xit\n"       // : exit program, E -l removes login cred from config
-                    << "(H)elp\n"       // : get choice instructions
-                    << "    ><>choice: ";
+                    << "(H)elp\n";       // : get choice instructions
+          return;
+}
+
+void PrintHandler::PrintCustomInputLine(std::string inputContext, std::ostream& outStream)
+{
+          outStream << "    ><>" << inputContext << ": ";
+
+          return;
+}
+
+void PrintHandler::PrintMenuChoiceSelection(std::string choiceContext, std::ostream& outStream)
+{
+          outStream << choiceContext << "\n";
 
           return;
 }
