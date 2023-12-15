@@ -6,3 +6,10 @@ swap compiler flags in CMake
 
 GitHub README.md:
 Designed with modularity and testability in mind
+
+
+checks:
+app.codecov.io
+app.codacy.com
+codefactor.io
+synopsys.com
