@@ -8,8 +8,6 @@ struct PasswordManager
           PasswordManager(){}
           ~PasswordManager(){}
 
-          void ProcessMenuInput(const char& menuInput);
-
           void RUN_CLI_VAULT();
 };
 
