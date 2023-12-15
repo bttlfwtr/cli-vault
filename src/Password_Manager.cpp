@@ -9,26 +9,27 @@ void PasswordManager::RUN_CLI_VAULT()
                     switch (InputHandler::GetMenuChoice(std::cin))
                     {
                     case 'A':
-                              PrintHandler::PrintMenuChoiceSelection("ADDED", std::cout);
+                              PrintHandler::PrintMenuSelection("ADDED", std::cout);
                               break;
                     case 'S':
-                              PrintHandler::PrintMenuChoiceSelection("SEARCHED", std::cout);
+                              PrintHandler::PrintMenuSelection("SEARCHED", std::cout);
                               break;
                     case 'M':
-                              PrintHandler::PrintMenuChoiceSelection("MODIFIED", std::cout);
+                              PrintHandler::PrintMenuSelection("MODIFIED", std::cout);
                               break;
                     case 'D':
-                              PrintHandler::PrintMenuChoiceSelection("DELETED", std::cout);
+                              PrintHandler::PrintMenuSelection("DELETED", std::cout);
                               break;
-                    case 'E':
-                              PrintHandler::PrintMenuChoiceSelection("EXITED", std::cout);
-                              break;
+                    case 'E': // exits program by all means of return keyword.
+                              PrintHandler::PrintMenuSelection("EXITED", std::cout);
+
+                              return;
                     case 'H':
-                              PrintHandler::PrintMenuChoiceSelection("HELPED", std::cout);
+                              PrintHandler::PrintMenuSelection("HELPED", std::cout);
                               break;
 
                     default:
-                              PrintHandler::PrintMenuChoiceSelection("FAILED OPERATION", std::cout);
+                              PrintHandler::PrintMenuSelection("FAILED OPERATION", std::cout);
                               break;
                     }
 

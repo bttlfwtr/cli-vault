@@ -18,7 +18,7 @@ void PrintHandler::PrintCustomInputLine(std::string inputContext, std::ostream& 
           return;
 }
 
-void PrintHandler::PrintMenuChoiceSelection(std::string choiceContext, std::ostream& outStream)
+void PrintHandler::PrintMenuSelection(std::string choiceContext, std::ostream& outStream)
 {
           outStream << choiceContext << "\n";
 
