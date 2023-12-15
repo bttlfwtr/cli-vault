@@ -11,14 +11,14 @@ void PrintHandler::PrintMenu(std::ostream& outStringStream)
           return;
 }
 
-void PrintHandler::PrintInputContext(std::string inputContext, std::ostream& outStream)
+void PrintHandler::PrintInputContext(const std::string inputContext, std::ostream& outStream)
 {
           outStream << "    ><>" << inputContext << ": ";
 
           return;
 }
 
-void PrintHandler::PrintMenuSelection(std::string menuChoiceContext, std::ostream& outStream)
+void PrintHandler::PrintMenuSelection(const std::string menuChoiceContext, std::ostream& outStream)
 {
           outStream << menuChoiceContext << "\n";
 
