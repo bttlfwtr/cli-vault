@@ -26,8 +26,8 @@ void PasswordManager::RUN_CLI_VAULT()
                               return;
                     case 'H':
                               PrintHandler::PrintMenuSelection("HELPED", std::cout);
-                              break;
 
+                              break;
                     default:
                               PrintHandler::PrintMenuSelection("FAILED OPERATION", std::cout);
                               break;

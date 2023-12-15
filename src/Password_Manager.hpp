@@ -9,6 +9,8 @@ struct PasswordManager
           ~PasswordManager(){}
 
           void RUN_CLI_VAULT();
+
+
 };
 
 #endif // !PASSWORD_MANAGER_HPP
