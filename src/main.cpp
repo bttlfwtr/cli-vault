@@ -8,5 +8,7 @@ int main() // pointer to argument pointers thus an array of pointers
 
           delete pwManager;
 
+          std::cout << "terminating process...\n";
+
           return 0;
 }
