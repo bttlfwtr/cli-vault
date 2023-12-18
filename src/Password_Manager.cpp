@@ -2,15 +2,11 @@
 
 void PasswordManager::RUN_CLI_VAULT()
 {
-          char* menuInput;
-
           while (true)
           {
                     PrintHandlers::PrintMenu(std::cout);
 
-                    menuInput = InputHandlers::GetMenuChoice(std::cin);
-
-                    switch (*menuInput)
+                    switch (InputHandlers::GetMenuChoice(std::cin))
                     {
                               case 'A':
                                         PrintHandlers::PrintMenuSelection("ADDED", std::cout);
@@ -37,8 +33,6 @@ void PasswordManager::RUN_CLI_VAULT()
                                         break;
                     }
 
-
-                    delete menuInput;
           }
 
           return;

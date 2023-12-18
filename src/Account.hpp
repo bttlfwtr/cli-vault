@@ -9,7 +9,7 @@ struct Account
                     password(new std::string),
                     domain(new std::string),
                     description(new std::string),
-                    tag(new Tag) {}
+                    tag(new Tag){}
 
           ~Account()
           {
