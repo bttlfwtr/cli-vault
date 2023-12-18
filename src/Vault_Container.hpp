@@ -10,7 +10,11 @@
 
 struct VaultContainer
 {
-
+          /*
+          domain of keys mapped to values of item username key
+          associated with item object.
+          */
+          std::unordered_map<std::string, std::unordered_map<std::string, std::string>> vault;
 };
 
 #endif // !VAULT_CONTAINER_HPP
