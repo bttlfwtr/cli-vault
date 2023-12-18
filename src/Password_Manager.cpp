@@ -6,7 +6,7 @@ void PasswordManager::RUN_CLI_VAULT()
           {
                     PrintHandlers::PrintMenu(std::cout);
 
-                    switch (InputHandlers::GetMenuChoice(std::cin))
+                    switch (*InputHandlers::GetMenuChoice(std::cin))
                     {
                               case 'A':
                                         PrintHandlers::PrintMenuSelection("ADDED", std::cout);
