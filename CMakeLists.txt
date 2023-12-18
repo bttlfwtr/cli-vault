@@ -1,11 +1,11 @@
-# cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.2)
 
 project(cli-vault)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# set(CMAKE_CXX_STANDARD 20)
+# set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -Wall -Wextra -Wcast-align -Wcast-qual -Wconversion -Wpedantic -Wpointer-arith -Wunused -Wunused-variable -fno-inline -Wshadow")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native -g -O0 -Wall -Wextra -Wcast-align -Wcast-qual -Wconversion -Wpedantic -Wpointer-arith -Wunused -Wunused-variable -fno-inline -Wshadow")
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23 -march=native -Ofast -s -Wl,-s,--as-needed")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -14,11 +14,13 @@ file(GLOB project-sources
 
           "${CMAKE_SOURCE_DIR}/src/*.cpp"
           "${CMAKE_SOURCE_DIR}/src/*.hpp"
+
 )
 
 add_executable(cli-vault
 
           ${project-sources}
+
 )
 
 add_custom_target(cleanbuild
