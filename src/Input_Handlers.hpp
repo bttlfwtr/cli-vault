@@ -8,7 +8,7 @@
 
 struct InputHandlers
 {
-          static std::unique_ptr<char> GetMenuChoice(std::istream& inStream);
+          static char GetMenuChoice(std::istream& inStream);
 
 };
 

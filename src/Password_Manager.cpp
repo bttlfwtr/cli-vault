@@ -13,7 +13,7 @@ void PasswordManager::RUN_CLI_VAULT()
                     Once switch case ends, then the smart parter is considered out of scope
                     then the destructor for it will be called.
                     */
-                    switch (*InputHandlers::GetMenuChoice(std::cin))
+                    switch (InputHandlers::GetMenuChoice(std::cin))
                     {
                               case 'A':
                                         PrintHandlers::PrintMenuSelection("ADDED", std::cout);
