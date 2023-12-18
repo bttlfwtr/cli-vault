@@ -4,7 +4,7 @@
 #include <iostream> // dependency injection using ostream object
 // #include <sstream>
 
-struct PrintHandler
+struct PrintHandlers
 {
           // use (std::ostream& outStream = std::cin) to provide default value without needing to feed std::cin into argument
           static void PrintMenu(std::ostream& outStream);

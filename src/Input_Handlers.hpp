@@ -3,9 +3,9 @@
 
 #include <limits>
 
-#include "Print_Handler.hpp"
+#include "Print_Handlers.hpp"
 
-struct InputHandler
+struct InputHandlers
 {
           static char GetMenuChoice(std::istream& inStream);
 

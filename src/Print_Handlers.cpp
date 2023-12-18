@@ -1,6 +1,6 @@
-#include "Print_Handler.hpp"
+#include "Print_Handlers.hpp"
 
-void PrintHandler::PrintMenu(std::ostream& outStringStream)
+void PrintHandlers::PrintMenu(std::ostream& outStringStream)
 {
           outStringStream << "(A)dd\n"  // : add item to domain
                     << "(S)earch\n"     // : search specific content, or print all content of vault
@@ -11,14 +11,14 @@ void PrintHandler::PrintMenu(std::ostream& outStringStream)
           return;
 }
 
-void PrintHandler::PrintInputContext(const std::string inputContext, std::ostream& outStream)
+void PrintHandlers::PrintInputContext(const std::string inputContext, std::ostream& outStream)
 {
-          outStream << "    ><>" << inputContext << ": ";
+          outStream << "    ><>" << inputContext;
 
           return;
 }
 
-void PrintHandler::PrintMenuSelection(const std::string menuChoiceContext, std::ostream& outStream)
+void PrintHandlers::PrintMenuSelection(const std::string menuChoiceContext, std::ostream& outStream)
 {
           outStream << menuChoiceContext << "\n";
 

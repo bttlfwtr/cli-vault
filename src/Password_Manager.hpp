@@ -1,7 +1,7 @@
 #ifndef PASSWORD_MANAGER_HPP
 #define PASSWORD_MANAGER_HPP
 
-#include "Input_Handler.hpp"
+#include "Input_Handlers.hpp"
 
 struct PasswordManager
 {

@@ -4,33 +4,33 @@ void PasswordManager::RUN_CLI_VAULT()
 {
           while (true)
           {
-                    PrintHandler::PrintMenu(std::cout);
+                    PrintHandlers::PrintMenu(std::cout);
 
-                    switch (InputHandler::GetMenuChoice(std::cin))
+                    switch (InputHandlers::GetMenuChoice(std::cin))
                     {
-                    case 'A':
-                              PrintHandler::PrintMenuSelection("ADDED", std::cout);
-                              break;
-                    case 'S':
-                              PrintHandler::PrintMenuSelection("SEARCHED", std::cout);
-                              break;
-                    case 'M':
-                              PrintHandler::PrintMenuSelection("MODIFIED", std::cout);
-                              break;
-                    case 'D':
-                              PrintHandler::PrintMenuSelection("DELETED", std::cout);
-                              break;
-                    case 'E': // exits program by all means of return keyword.
-                              PrintHandler::PrintMenuSelection("EXITED", std::cout);
+                              case 'A':
+                                        PrintHandlers::PrintMenuSelection("ADDED", std::cout);
+                                        break;
+                              case 'S':
+                                        PrintHandlers::PrintMenuSelection("SEARCHED", std::cout);
+                                        break;
+                              case 'M':
+                                        PrintHandlers::PrintMenuSelection("MODIFIED", std::cout);
+                                        break;
+                              case 'D':
+                                        PrintHandlers::PrintMenuSelection("DELETED", std::cout);
+                                        break;
+                              case 'E': // exits program by all means of return keyword.
+                                        PrintHandlers::PrintMenuSelection("EXITED", std::cout);
 
-                              return;
-                    case 'H':
-                              PrintHandler::PrintMenuSelection("HELPED", std::cout);
+                                        return;
+                              case 'H':
+                                        PrintHandlers::PrintMenuSelection("HELPED", std::cout);
 
-                              break;
-                    default:
-                              PrintHandler::PrintMenuSelection("FAILED OPERATION", std::cout);
-                              break;
+                                        break;
+                              default:
+                                        PrintHandlers::PrintMenuSelection("FAILED OPERATION", std::cout);
+                                        break;
                     }
 
           }

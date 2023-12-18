@@ -1,10 +1,10 @@
-#include "Input_Handler.hpp"
+#include "Input_Handlers.hpp"
 
-char InputHandler::GetMenuChoice(std::istream& inStream)
+char InputHandlers::GetMenuChoice(std::istream& inStream)
 {
           char menuChoice;
 
-          PrintHandler::PrintInputContext("choice", std::cout);
+          PrintHandlers::PrintInputContext("choice: ", std::cout);
 
           inStream >> menuChoice;
           std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
