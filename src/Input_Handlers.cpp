@@ -6,7 +6,8 @@ char InputHandlers::GetMenuChoice(std::istream& inStream)
 
           char menuChoice;
           inStream >> menuChoice;
-          toupper(menuChoice);
+          // toupper returns int, typecast char to ignore conversion warning
+          menuChoice = (char)toupper(menuChoice);
 
           // ternary check if menuChoice is a lower case, if true, convert, else default to input.
           // take lower case input, subtract it by the lower bound of its caseness to normalize ascii value, then add lower bound of upper case.
