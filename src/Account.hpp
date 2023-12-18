@@ -5,10 +5,13 @@
 
 struct Account
 {
-          std::string username;
-          std::string password;
-          std::string domain;
-          std::string description;
+          Account();
+          ~Account();
+
+          std::string* username;
+          std::string* password;
+          std::string* domain;
+          std::string* description;
 
           // enum for predefined set of tags
           enum struct Tag
