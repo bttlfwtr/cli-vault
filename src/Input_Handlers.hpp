@@ -2,12 +2,13 @@
 #define INPUT_HANDLER_HPP
 
 #include <limits>
+#include <memory>
 
 #include "Print_Handlers.hpp"
 
 struct InputHandlers
 {
-          static char GetMenuChoice(std::istream& inStream);
+          static std::unique_ptr<char> GetMenuChoice(std::istream& inStream);
 
 };
 
