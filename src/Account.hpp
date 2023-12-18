@@ -1,24 +1,16 @@
 #ifndef ACCOUNT_HPP
 #define ACCOUNT_HPP
 
+#include <memory>
 #include <string>
 
 struct Account
 {
-          Account() : username(new std::string),
-                    password(new std::string),
-                    domain(new std::string),
-                    description(new std::string),
-                    tag(new Tag){}
-
-          ~Account()
-          {
-                    delete username;
-                    delete password;
-                    delete domain;
-                    delete description;
-                    delete tag;
-          }
+          Account() : username(std::make_unique<std::string>()),
+                    password(std::make_unique<std::string>()),
+                    domain(std::make_unique<std::string>()),
+                    description(std::make_unique<std::string>()),
+                    tag(std::make_unique<Tag>()){}
 
           // enum for predefined set of tags
           enum struct Tag
@@ -29,11 +21,11 @@ struct Account
                     gaming
           };
 
-          std::string* username;
-          std::string* password;
-          std::string* domain;
-          std::string* description;
-          Tag* tag;
+          std::unique_ptr<std::string> username;
+          std::unique_ptr<std::string> password;
+          std::unique_ptr<std::string> domain;
+          std::unique_ptr<std::string> description;
+          std::unique_ptr<Tag> tag;
 };
 
 #endif // !ACCOUNT_HPP
