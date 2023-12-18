@@ -1,7 +1,6 @@
 #ifndef ACCOUNT_HPP
 #define ACCOUNT_HPP
 
-#include <memory>
 #include <string>
 
 struct Account
@@ -9,10 +8,10 @@ struct Account
           // enum for predefined set of tags
           enum struct Tag
           {
+                    game,
                     school,
-                    work,
                     sus,
-                    gaming
+                    work
           };
 
           std::string username;

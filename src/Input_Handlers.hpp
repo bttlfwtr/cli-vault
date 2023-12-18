@@ -2,7 +2,6 @@
 #define INPUT_HANDLER_HPP
 
 #include <limits>
-#include <memory>
 
 #include "Print_Handlers.hpp"
 
