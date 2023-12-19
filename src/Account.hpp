@@ -3,20 +3,27 @@
 
 #include <string>
 
+// enum for predefined set of tags
+enum Tag
+{
+          game,
+          personal,
+          school,
+          sus,
+          work
+};
+
 struct Account
 {
-          // enum for predefined set of tags
-          enum Tag
-          {
-                    game,
-                    school,
-                    sus,
-                    work
-          };
+          // -Wreorder of list initializer matches member cluster
+          Account(){}
+          Account(std::string d, std::string u, std::string p, std::string desc, Tag t) :
+                    domain(d), username(u), password(p), description(desc), tag(t){}
 
+          // member cluster / account properties
+          std::string domain;
           std::string username;
           std::string password;
-          std::string domain;
           std::string description;
           Tag tag;
 };

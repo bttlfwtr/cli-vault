@@ -23,6 +23,17 @@ add_executable(cli-vault
 
 )
 
+add_executable(test_stage
+
+          ./tests/test_staging.cpp
+          ./src/Account.cpp
+          ./src/Input_Handlers.cpp
+          ./src/Password_Manager.cpp
+          ./src/Print_Handlers.cpp
+          ./src/Vault_Container.cpp
+)
+
+
 add_custom_target(cleanbuild
 
           COMMAND ${CMAKE_MAKE_PROGRAM} clean

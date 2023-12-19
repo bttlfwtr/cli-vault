@@ -4,5 +4,9 @@ int main()
 {
           VaultContainer container;
 
-          container.vault
+          Account amazonItem0("amazon", "amazonUsername0", "amazonPassword0", "no prime", Tag::personal);
+
+          container.AddItem(amazonItem0);
+
+          container.PrintVault(std::cout);
 }
