@@ -16,27 +16,27 @@ void PasswordManager::RUN_CLI_VAULT()
                     switch (InputHandlers::GetMenuChoice(std::cin))
                     {
                               case 'A':
-                                        PrintHandlers::PrintMenuSelection("ADDED", std::cout);
+                                        PrintHandlers::PrintMenuSelection("ADDED\n", std::cout);
                                         break;
                               case 'S':
-                                        PrintHandlers::PrintMenuSelection("SEARCHED", std::cout);
+                                        PrintHandlers::PrintMenuSelection("SEARCHED\n", std::cout);
                                         break;
                               case 'M':
-                                        PrintHandlers::PrintMenuSelection("MODIFIED", std::cout);
+                                        PrintHandlers::PrintMenuSelection("MODIFIED\n", std::cout);
                                         break;
                               case 'D':
-                                        PrintHandlers::PrintMenuSelection("DELETED", std::cout);
+                                        PrintHandlers::PrintMenuSelection("DELETED\n", std::cout);
                                         break;
                               case 'E': // exits program by all means of return keyword.
-                                        PrintHandlers::PrintMenuSelection("EXITED", std::cout);
+                                        PrintHandlers::PrintMenuSelection("EXITED\n", std::cout);
 
                                         return;
                               case 'H':
-                                        PrintHandlers::PrintMenuSelection("HELPED", std::cout);
+                                        PrintHandlers::PrintMenuSelection("HELPED\n", std::cout);
 
                                         break;
                               default:
-                                        PrintHandlers::PrintMenuSelection("FAILED OPERATION", std::cout);
+                                        PrintHandlers::PrintMenuSelection("FAILED OPERATION\n", std::cout);
                                         break;
                     }
 

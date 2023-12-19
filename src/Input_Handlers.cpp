@@ -13,7 +13,7 @@ char InputHandlers::GetMenuChoice(std::istream& inStream)
           // take lower case input, subtract it by the lower bound of its caseness to normalize ascii value, then add lower bound of upper case.
           // menuChoice = (menuChoice >= 'a' && menuChoice <= 'z') ? (menuChoice - 97 + 65) : menuChoice;
 
-          // ignore following inputs of char std::cin
+          // ignore buffered following inputs of char std::cin
           std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
           return menuChoice;
