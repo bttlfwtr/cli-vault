@@ -6,7 +6,7 @@
 struct Account
 {
           // enum for predefined set of tags
-          enum struct Tag
+          enum Tag
           {
                     game,
                     school,
