@@ -4,6 +4,7 @@ void PasswordManager::RUN_CLI_VAULT()
 {
           while (true)
           {
+                    // system("clear"); // vulnerability
                     PrintHandlers::PrintMenu(std::cout);
 
                     /*
@@ -39,6 +40,8 @@ void PasswordManager::RUN_CLI_VAULT()
                                         PrintHandlers::PrintMenuSelection("BAD OPERATION\n", std::cout);
                                         break;
                     }
+
+                    // _getch(); // if using screen clear
 
           }
 
