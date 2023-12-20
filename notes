@@ -1,5 +1,5 @@
 when arriving at a email input, allow user to select current existing emails in "email related domains"
-convert everything into raw pointers
+convert NON-PRIMITIVE TYPES into raw pointers, use valgrind to test leaks
 check integrity of decrypted and encrypted vault
 get email credentials assocated with that email : get @----. , parse into domain key then use entire email to parse into username key.
 default iostream objects in paramters to = std::cin/std::cout
