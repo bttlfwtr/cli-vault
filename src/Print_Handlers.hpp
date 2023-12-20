@@ -22,7 +22,7 @@ struct PrintHandlers
           static void PrintItemInfo(const Account& account, std::ostream& outStream);
           static void PrintMenu(std::ostream& outStream);
           static void PrintMenuSelection(const std::string choiceContext, std::ostream& outStream);
-          static void PrintTag(const Tag& tag, std::ostream& outStream);
+          static std::string GetTagString(const Tag& tag);
 };
 
 #endif // !PRINT_HANDLER_HPP

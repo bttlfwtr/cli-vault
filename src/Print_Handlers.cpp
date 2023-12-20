@@ -26,31 +26,24 @@ void PrintHandlers::PrintMenuSelection(const std::string menuChoiceContext, std:
           return;
 }
 
-void PrintHandlers::PrintTag(const Tag& tag, std::ostream& outStream)
+std::string PrintHandlers::GetTagString(const Tag& tag)
 {
           switch (tag)
           {
                     case Tag::GAME :
-                              outStream << "game\n";
-                              break;
+                              return "GAME";
                     case Tag::PERSONAL :
-                              outStream << "personal\n";
-                              break;
+                              return "PERSONAL";
                     case Tag::SCHOOL :
-                              outStream << "school\n";
-                              break;
+                              return "SCHOOL";
                     case Tag::SUS :
-                              outStream << "sus\n";
-                              break;
+                              return "SUS";
                     case Tag::WORK :
-                              outStream << "work\n";
-                              break;
+                              return "WORK";
                     default :
-                              outStream << "?TAG?\n";
-                              break;
+                              return "?TAG?";
           }
 
-          return;
 }
 
 void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStream)
@@ -58,9 +51,10 @@ void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStrea
           outStream << account.username << "\n"
                     << account.password << "\n"
                     << account.email << "\n"
-                    << account.description << "\n";
+                    << account.description << "\n"
+                    << GetTagString(account.tag) << "\n";
 
-          PrintTag(account.tag, outStream);
+          // PrintTag(account.tag, outStream);
 
           return;
 }
