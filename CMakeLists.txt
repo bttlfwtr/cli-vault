@@ -33,7 +33,6 @@ add_executable(test_stage
           ./src/Vault_Container.cpp
 )
 
-
 add_custom_target(cleanbuild
 
           COMMAND ${CMAKE_MAKE_PROGRAM} clean
@@ -41,4 +40,5 @@ add_custom_target(cleanbuild
           COMMENT "removing previous build artifacts..."
 )
 
-add_dependencies(cli-vault cleanbuild)
+# build target right to left <====
+add_dependencies(cli-vault test_stage cleanbuild)

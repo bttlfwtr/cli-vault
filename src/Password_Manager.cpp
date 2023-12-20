@@ -36,7 +36,7 @@ void PasswordManager::RUN_CLI_VAULT()
 
                                         break;
                               default:
-                                        PrintHandlers::PrintMenuSelection("FAILED OPERATION\n", std::cout);
+                                        PrintHandlers::PrintMenuSelection("BAD OPERATION\n", std::cout);
                                         break;
                     }
 

@@ -25,3 +25,38 @@ void PrintHandlers::PrintMenuSelection(const std::string menuChoiceContext, std:
 
           return;
 }
+
+void PrintHandlers::PrintTag(const Tag& tag, std::ostream& outStream)
+{
+          switch (tag)
+          {
+                    case Tag::game :
+                              outStream << "game\n";
+                              break;
+                    case Tag::personal :
+                              outStream << "personal\n";
+                              break;
+                    case Tag::school :
+                              outStream << "school\n";
+                              break;
+                    case Tag::sus :
+                              outStream << "sus\n";
+                              break;
+                    case Tag::work :
+                              outStream << "work\n";
+                              break;
+                    default :
+                              outStream << "?TAG?\n";
+                              break;
+          }
+
+          return;
+}
+
+void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStream)
+{
+          outStream << account.username << "\n"
+                    << account.password << "\n"
+                    << account.email << "\n"
+                    << account.description << "\n";
+}

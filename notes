@@ -1,3 +1,6 @@
+convert everything into raw pointers
+check integrity of decrypted and encrypted vault
+get email credentials assocated with that email : get @----. , parse into domain key then use entire email to parse into username key.
 default iostream objects in paramters to = std::cin/std::cout
 remind users it uses system("CLS") on windows environment
 finish setting up ci with gtest in tests folder, test file per header

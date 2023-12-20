@@ -14,7 +14,7 @@ char InputHandlers::GetMenuChoice(std::istream& inStream)
           // menuChoice = (menuChoice >= 'a' && menuChoice <= 'z') ? (menuChoice - 97 + 65) : menuChoice;
 
           // ignore buffered following inputs of char std::cin
-          std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+          inStream.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
           return menuChoice;
 }
