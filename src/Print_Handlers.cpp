@@ -59,4 +59,8 @@ void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStrea
                     << account.password << "\n"
                     << account.email << "\n"
                     << account.description << "\n";
+
+          PrintTag(account.tag, outStream);
+
+          return;
 }

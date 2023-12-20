@@ -15,8 +15,6 @@ void VaultContainer::PrintVault(std::ostream& outStream)
                     for (const auto& userKey : domainKey.second)
                     {
                               PrintHandlers::PrintItemInfo(userKey.second, std::cout);
-
-                              PrintHandlers::PrintTag(userKey.second.tag, std::cout);
                     }
           }
 }

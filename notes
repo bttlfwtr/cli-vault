@@ -1,3 +1,4 @@
+when arriving at a email input, allow user to select current existing emails in "email related domains"
 convert everything into raw pointers
 check integrity of decrypted and encrypted vault
 get email credentials assocated with that email : get @----. , parse into domain key then use entire email to parse into username key.
