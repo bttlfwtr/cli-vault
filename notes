@@ -1,3 +1,4 @@
+like email selection, let user select what tag the account is 0...N of Tag enum
 when arriving at a email input, allow user to select current existing emails in "email related domains"
 convert NON-PRIMITIVE TYPES into raw pointers, use valgrind to test leaks
 check integrity of decrypted and encrypted vault

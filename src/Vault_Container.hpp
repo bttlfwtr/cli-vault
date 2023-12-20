@@ -1,5 +1,5 @@
-#ifndef VAULT_CONTAINER_HPP
-#define VAULT_CONTAINER_HPP
+#ifndef __VAULT_CONTAINER_HPP__
+#define __VAULT_CONTAINER_HPP__
 
 #include <iostream>
 #include <unordered_map>
@@ -24,4 +24,4 @@ struct VaultContainer
           std::unordered_map<std::string, std::unordered_map<std::string, Account>> vault;
 };
 
-#endif // !VAULT_CONTAINER_HPP
+#endif

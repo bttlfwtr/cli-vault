@@ -1,5 +1,5 @@
-#ifndef ACCOUNT_HPP
-#define ACCOUNT_HPP
+#ifndef __ACCOUNT_HPP__
+#define __ACCOUNT_HPP__
 
 #include <string>
 
@@ -29,4 +29,4 @@ struct Account
           Tag tag;
 };
 
-#endif // !ACCOUNT_HPP
+#endif

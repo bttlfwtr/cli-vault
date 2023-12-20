@@ -1,5 +1,5 @@
-#ifndef PRINT_HANDLER_HPP
-#define PRINT_HANDLER_HPP
+#ifndef __PRINT_HANDLER_HPP__
+#define __PRINT_HANDLER_HPP__
 
 #include <iostream> // dependency injection using ostream object
 #include "Account.hpp"
@@ -25,4 +25,4 @@ struct PrintHandlers
           static std::string GetTagString(const Tag& tag);
 };
 
-#endif // !PRINT_HANDLER_HPP
+#endif

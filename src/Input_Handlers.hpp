@@ -1,5 +1,5 @@
-#ifndef INPUT_HANDLER_HPP
-#define INPUT_HANDLER_HPP
+#ifndef __INPUT_HANDLER_HPP__
+#define __INPUT_HANDLER_HPP__
 
 #include <limits>
 
@@ -11,4 +11,4 @@ struct InputHandlers
 
 };
 
-#endif // !INPUT_HANDLER_HPP
+#endif
