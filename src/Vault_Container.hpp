@@ -20,6 +20,7 @@ struct VaultContainer
 
           // domain of keys mapped to values of item username key
           // associated with item object.
+          //                  outer key                       inner key
           std::unordered_map<std::string, std::unordered_map<std::string, Account>> vault;
 };
 

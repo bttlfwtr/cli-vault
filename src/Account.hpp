@@ -6,11 +6,11 @@
 // enum for predefined set of tags
 enum Tag
 {
-          game,
-          personal,
-          school,
-          sus,
-          work
+          GAME,
+          PERSONAL,
+          SCHOOL,
+          SUS,
+          WORK
 };
 
 struct Account
@@ -21,7 +21,7 @@ struct Account
                     domain(d), username(u), password(p), email(e), description(desc), tag(t){}
 
           // member cluster / account properties
-          std::string domain;
+          std::string domain; // what if remove Account domain property and go off of user input domain instead?
           std::string username;
           std::string password;
           std::string email;

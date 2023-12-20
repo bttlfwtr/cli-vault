@@ -4,6 +4,17 @@
 #include <iostream> // dependency injection using ostream object
 #include "Account.hpp"
 
+enum Color
+{
+          RED,
+          ORANGE,
+          YELLOW,
+          GREEN,
+          BLUE,
+          INDIGO,
+          VIOLET
+};
+
 struct PrintHandlers
 {
           // use (std::ostream& outStream = std::cin) to provide default value without needing to feed std::cin into argument

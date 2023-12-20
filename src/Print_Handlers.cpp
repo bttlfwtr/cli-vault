@@ -30,19 +30,19 @@ void PrintHandlers::PrintTag(const Tag& tag, std::ostream& outStream)
 {
           switch (tag)
           {
-                    case Tag::game :
+                    case Tag::GAME :
                               outStream << "game\n";
                               break;
-                    case Tag::personal :
+                    case Tag::PERSONAL :
                               outStream << "personal\n";
                               break;
-                    case Tag::school :
+                    case Tag::SCHOOL :
                               outStream << "school\n";
                               break;
-                    case Tag::sus :
+                    case Tag::SUS :
                               outStream << "sus\n";
                               break;
-                    case Tag::work :
+                    case Tag::WORK :
                               outStream << "work\n";
                               break;
                     default :
