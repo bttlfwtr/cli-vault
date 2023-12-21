@@ -31,6 +31,7 @@ add_executable(test_stage
           ./src/Password_Manager.cpp
           ./src/Print_Handlers.cpp
           ./src/Vault_Container.cpp
+
 )
 
 add_custom_target(cleanbuild
@@ -38,6 +39,7 @@ add_custom_target(cleanbuild
           COMMAND ${CMAKE_MAKE_PROGRAM} clean
           WORKING_DIRECTORY ${CMAKE_BINARY_DIR} # current CMakeFiles dir
           COMMENT "removing previous build artifacts..."
+
 )
 
 # build target right to left <====

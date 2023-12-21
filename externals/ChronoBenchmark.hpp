@@ -11,15 +11,15 @@
 #include <chrono>
 #include <iostream>
 
-class Timer
+class ChronoTimer
 {
     public:
-        Timer()
+        ChronoTimer()
         {
             timerStartPoint = std::chrono::high_resolution_clock::now();
         }
 
-        ~Timer()
+        ~ChronoTimer()
         {
             Stop();
         }
@@ -27,21 +27,23 @@ class Timer
     // RAII
     void Stop()
     {
-        auto timerEndPoint = std::chrono::high_resolution_clock::now();
+        std::chrono::_V2::system_clock::time_point timerEndPoint{ std::chrono::high_resolution_clock::now() };
 
-        auto startMuS = std::chrono::time_point_cast<std::chrono::microseconds>(timerStartPoint).time_since_epoch().count();
-        auto endMuS = std::chrono::time_point_cast<std::chrono::microseconds>(timerEndPoint).time_since_epoch().count();
+        //                      int64_t
+        int64_t startMuS{ std::chrono::time_point_cast<std::chrono::microseconds>(timerStartPoint).time_since_epoch().count() };
+        int64_t endMuS{ std::chrono::time_point_cast<std::chrono::microseconds>(timerEndPoint).time_since_epoch().count() };
 
-        auto totalDurationMuS = endMuS - startMuS;
+        int64_t totalDurationMuS{ endMuS - startMuS };
 
-        // convert micro to milli
-        double totalDurationMilli = totalDurationMuS * 0.001;
+        // convert micro to milli    cast
+        double totalDurationMilli{ (double)totalDurationMuS * 0.001 };
 
         std::cout << totalDurationMilli << "milli\n";
     }
 
     private:
         std::chrono::time_point<std::chrono::high_resolution_clock> timerStartPoint;
+
 };
 
 #endif

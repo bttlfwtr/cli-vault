@@ -1,8 +1,12 @@
-#include "../src/Vault_Container.hpp"
 #include "../externals/ChronoBenchmark.hpp"
+#include "../src/Print_Handlers.hpp"
+#include "../src/Vault_Container.hpp"
 
 int main()
 {
+          std::ios_base::sync_with_stdio(false);
+
+
           VaultContainer container;
 
           // Account amazonItem0("amazon", "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL);
@@ -22,12 +26,20 @@ int main()
 
           // container.PrintVault(std::cout);
 
-          Timer* time = new Timer;
 
-          for (int i { 0 }; i < 9999999; ++i)
+          // std::cout << "   outerSize:" << container.vault.size() << "\n";
+
+          // for (const auto& domainKey : container.vault)
+          // {
+          //           std::cout << "      innerSize" << domainKey.second.size();
+          // }
+
+          ChronoTimer* timer = new ChronoTimer;
+
+          for (int i{ 0 }; i < 9999999; ++i)
           {
-                    container.AddItem(Account("amazon" + i, "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL));
+                    container.AddItem(Account("amazon" + std::to_string(i), "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL));
           }
 
-          delete time;
+          delete timer;
 }

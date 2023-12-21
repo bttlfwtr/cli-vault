@@ -2,7 +2,11 @@
 
 void VaultContainer::AddItem(const Account& item)
 {
-          vault[item.domain].emplace(item.username, item);
+          // ~8% slower, does not replace any key-value pairs if key already exists for inner or outer key.
+          // vault.emplace(item.domain, std::unordered_map<std::string, Account>()).first->second.emplace(item.username, item);
+
+          // TODO : check if username already exists within a domain
+          vault[item.domain][item.username] = item;
 
           return;
 }
