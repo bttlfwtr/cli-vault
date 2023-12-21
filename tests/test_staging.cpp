@@ -2,22 +2,22 @@
 
 int main()
 {
-          VaultContainer container;
+          // VaultContainer container;
 
-          Account amazonItem0("amazon", "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL);
-          Account amazonItem1("amazon", "amazonUsername1", "amazonPassword1", "somegmailaccount1@gmail.com", "yes prime", Tag::PERSONAL);
-          Account amazonItem2("amazon", "amazonUsername2", "amazonPassword2", "somegmailaccount2@gmail.com", "blank slate account", Tag::PERSONAL);
-          Account facebookItem0("facebook", "facebookUsername0", "facebookPassword0", "somegmailaccount3@gmail.com", "family and friends", Tag::PERSONAL);
-          Account facebookItem1("facebook", "facebookUsername1", "facebookPassword1", "somegmailaccount4@gmail.com", "link game accounts", Tag::GAME);
+          // Account amazonItem0("amazon", "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL);
+          // Account amazonItem1("amazon", "amazonUsername1", "amazonPassword1", "somegmailaccount1@gmail.com", "yes prime", Tag::PERSONAL);
+          // Account amazonItem2("amazon", "amazonUsername2", "amazonPassword2", "somegmailaccount2@gmail.com", "blank slate account", Tag::PERSONAL);
+          // Account facebookItem0("facebook", "facebookUsername0", "facebookPassword0", "somegmailaccount3@gmail.com", "family and friends", Tag::PERSONAL);
+          // Account facebookItem1("facebook", "facebookUsername1", "facebookPassword1", "somegmailaccount4@gmail.com", "link game accounts", Tag::GAME);
 
 
-          container.AddItem(amazonItem0);
-          container.AddItem(amazonItem1);
-          container.AddItem(amazonItem2);
-          container.AddItem(facebookItem0);
-          container.AddItem(facebookItem1);
+          // container.AddItem(amazonItem0);
+          // container.AddItem(amazonItem1);
+          // container.AddItem(amazonItem2);
+          // container.AddItem(facebookItem0);
+          // container.AddItem(facebookItem1);
 
-          std::cout << "outerSize:" << container.vault.size() << "\n";
+          // std::cout << "outerSize:" << container.vault.size() << "\n";
 
-          container.PrintVault(std::cout);
+          // container.PrintVault(std::cout);
 }
