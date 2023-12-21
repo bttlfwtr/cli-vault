@@ -1,8 +1,9 @@
 #include "../src/Vault_Container.hpp"
+#include "../externals/ChronoBenchmark.hpp"
 
 int main()
 {
-          // VaultContainer container;
+          VaultContainer container;
 
           // Account amazonItem0("amazon", "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL);
           // Account amazonItem1("amazon", "amazonUsername1", "amazonPassword1", "somegmailaccount1@gmail.com", "yes prime", Tag::PERSONAL);
@@ -20,4 +21,13 @@ int main()
           // std::cout << "outerSize:" << container.vault.size() << "\n";
 
           // container.PrintVault(std::cout);
+
+          Timer* time = new Timer;
+
+          for (int i { 0 }; i < 9999999; ++i)
+          {
+                    container.AddItem(Account("amazon" + i, "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL));
+          }
+
+          delete time;
 }
