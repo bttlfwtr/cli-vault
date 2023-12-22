@@ -25,6 +25,10 @@ int main()
           container.AddItem(amazonItem1);
           container.AddItem(amazonItem2);
 
+
+          container.AddItem(duplicateAmazonItem2);
+          container.AddItem(duplicateAmazonItem2);
+          container.AddItem(duplicateAmazonItem2);
           container.AddItem(duplicateAmazonItem2);
 
 
