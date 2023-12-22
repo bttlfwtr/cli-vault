@@ -12,38 +12,18 @@ void PrintHandlers::PrintMenu(std::ostream& outStream)
           return;
 }
 
-void PrintHandlers::PrintInputContext(const std::string inputContext, std::ostream& outStream)
+void PrintHandlers::PrintInputContext(const std::string& inputContext, std::ostream& outStream)
 {
           outStream << "    ><>" << inputContext;
 
           return;
 }
 
-void PrintHandlers::PrintMenuSelection(const std::string menuChoiceContext, std::ostream& outStream)
+void PrintHandlers::PrintMenuSelection(const std::string& menuChoiceContext, std::ostream& outStream)
 {
           outStream << menuChoiceContext;
 
           return;
-}
-
-std::string PrintHandlers::GetTagString(const Tag& tag)
-{
-          switch (tag)
-          {
-                    case Tag::GAME :
-                              return "GAME";
-                    case Tag::PERSONAL :
-                              return "PERSONAL";
-                    case Tag::SCHOOL :
-                              return "SCHOOL";
-                    case Tag::SUS :
-                              return "SUS";
-                    case Tag::WORK :
-                              return "WORK";
-                    default :
-                              return "?TAG?";
-          }
-
 }
 
 void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStream)
@@ -52,9 +32,13 @@ void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStrea
                     << account.password << "\n"
                     << account.email << "\n"
                     << account.description << "\n"
-                    << GetTagString(account.tag) << "\n";
+                    << Account::GetTagString(account.tag) << "\n";
 
           // PrintTag(account.tag, outStream);
 
           return;
+}
+void PrintHandlers::PrintExists(const std::string existsContext, std::ostream& outStream)
+{
+          outStream << existsContext << " already exists\n";
 }

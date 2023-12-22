@@ -44,4 +44,4 @@ add_custom_target(cleanbuild
 
 # build target right to left <====
 add_dependencies(cli-vault cleanbuild)
-add_dependencies(test_stage cleanbuild)
+# add_dependencies(test_stage cleanbuild)

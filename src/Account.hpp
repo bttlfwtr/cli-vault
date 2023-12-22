@@ -4,17 +4,19 @@
 #include <string>
 
 // enum for predefined set of tags
-enum Tag
-{
-          GAME,
-          PERSONAL,
-          SCHOOL,
-          SUS,
-          WORK
-};
 
 struct Account
 {
+          enum Tag
+          {
+                    GAME,
+                    PERSONAL,
+                    PUBLIC,
+                    SCHOOL,
+                    SUS,
+                    WORK
+          };
+
           // -Wreorder of list initializer matches member cluster
           Account(){}
           Account(std::string d, std::string u, std::string p, std::string e, std::string desc, Tag t) :
@@ -27,6 +29,8 @@ struct Account
           std::string email;
           std::string description;
           Tag tag;
+
+          static std::string GetTagString(const Tag& tag);
 };
 
 #endif

@@ -5,8 +5,18 @@ void VaultContainer::AddItem(const Account& item)
           // ~8% slower, does not replace any key-value pairs if key already exists for inner or outer key.
           // vault.emplace(item.domain, std::unordered_map<std::string, Account>()).first->second.emplace(item.username, item);
 
-          // TODO : check if username already exists within a domain
-          vault[item.domain][item.username] = item;
+          // check if username key exists without [] operator initializing a domain key
+          if ((vault.count(item.domain) > 0) && (vault[item.domain].count(item.username) > 0))
+          {
+                    // TODO : HANDLE ALREADY EXISTING
+                    PrintHandlers::PrintExists(item.username, std::cout);
+
+                    return;
+          }
+          else
+          {
+                    vault[item.domain][item.username] = item;
+          }
 
           return;
 }
