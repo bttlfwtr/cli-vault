@@ -16,7 +16,7 @@ int main()
           Account amazonItem1("amazon", "amazonUsername1", "amazonPassword1", "somegmailaccount1@gmail.com", "yes prime", Account::Tag::PERSONAL);
           Account amazonItem2("amazon", "amazonUsername2", "amazonPassword2", "somegmailaccount2@gmail.com", "blank slate account", Account::Tag::PERSONAL);
 
-          Account duplicateAmazonItem2(Account("amazon", "amazonUsername2", "amazonPassword2", "somegmailaccount2@gmail.com", "blank slate account", Account::Tag::PERSONAL));
+          Account duplicateAmazonItem2(Account("amazon", "amazonUsername2", "REPLACEDPASSWORD", "somegmailaccount2@gmail.com", "blank slate account", Account::Tag::PERSONAL));
 
           container.AddItem(googleItem0);
           container.AddItem(facebookItem0);
@@ -35,19 +35,21 @@ int main()
           container.PrintVault(std::cout);
 
 
-          std::cout << "   outerSize:" << container.vault.size() << "\n";
-
-          for (const auto& domainKey : container.vault)
-          {
-                    std::cout << "      innerSize" << domainKey.second.size();
-          }
 
           // ChronoTimer* timer = new ChronoTimer;
 
           // for (int i{ 0 }; i < 9999999; ++i)
           // {
-          //           container.AddItem(Account("amazon" + std::to_string(i), "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Tag::PERSONAL));
+          //           container.AddItem(Account("amazon" + std::to_string(i), "amazonUsername0", "amazonPassword0", "somegmailaccount0@gmail.com", "no prime", Account::Tag::PERSONAL));
           // }
 
           // delete timer;
+
+
+          std::cout << "   outerSize:" << container.vault.size() << "\n      innerSize: ";
+
+          for (const auto& domainKey : container.vault)
+          {
+                    std::cout << domainKey.second.size() << " ";
+          }
 }

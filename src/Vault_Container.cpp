@@ -6,10 +6,12 @@ void VaultContainer::AddItem(const Account& item)
           // vault.emplace(item.domain, std::unordered_map<std::string, Account>()).first->second.emplace(item.username, item);
 
           // check if username key exists without [] operator initializing a domain key
+          // && operator acts as short circuit for first condition
           if ((vault.count(item.domain) > 0) && (vault[item.domain].count(item.username) > 0))
           {
                     // TODO : HANDLE ALREADY EXISTING
                     PrintHandlers::PrintExists(item.username, std::cout);
+                    PrintHandlers::PrintItemInfo(vault[item.domain][item.username], std::cout);
 
                     return;
           }
@@ -31,11 +33,11 @@ void VaultContainer::PrintVault(std::ostream& outStream)
                     for (const auto& userKey : domainKey.second)
                     {
                               PrintHandlers::PrintItemInfo(userKey.second, std::cout);
-                              std::cout << "\n";
+                              outStream << "\n";
 
                     }
 
-                    std::cout << "\n";
+                    outStream << "\n";
           }
 
           return;
