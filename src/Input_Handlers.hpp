@@ -3,12 +3,13 @@
 
 #include <limits>
 
+#include "Account.hpp"
 #include "Print_Handlers.hpp"
 
 struct InputHandlers
 {
           static char GetMenuChoice(std::istream& inStream);
-
+          static Account GetAccountInput(std::istream& inStream);
 };
 
 #endif

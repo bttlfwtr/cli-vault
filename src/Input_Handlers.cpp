@@ -18,3 +18,8 @@ char InputHandlers::GetMenuChoice(std::istream& inStream)
 
           return menuChoice;
 }
+
+Account InputHandlers::GetAccountInput(std::istream& inStream)
+{
+
+}

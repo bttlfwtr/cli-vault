@@ -16,12 +16,17 @@ void PasswordManager::RUN_CLI_VAULT()
                     */
                     switch (InputHandlers::GetMenuChoice(std::cin))
                     {
+
+
                               case 'A':
 
                                         PrintHandlers::PrintMenuSelection("ADDED\n", std::cout);
+
+
                                         break;
                               case 'S':
                                         PrintHandlers::PrintMenuSelection("SEARCHED\n", std::cout);
+
                                         break;
                               case 'M':
                                         PrintHandlers::PrintMenuSelection("MODIFIED\n", std::cout);
