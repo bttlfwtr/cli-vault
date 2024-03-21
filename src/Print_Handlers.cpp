@@ -14,7 +14,7 @@ void PrintHandlers::PrintMenu(std::ostream& outStream)
 
 void PrintHandlers::PrintInputContext(const std::string& inputContext, std::ostream& outStream)
 {
-      outStream << "    ><>" << inputContext;
+      outStream << "      ><>" << inputContext;
 
       return;
 }
@@ -32,12 +32,13 @@ void PrintHandlers::PrintItemInfo(const Account& account, std::ostream& outStrea
             << account.password << "\n"
             << account.email << "\n"
             << account.description << "\n"
-            << Account::GetTagString(account.tag) << "\n";
+            << TagFunctions::GetStringFromTag(account.tag) << "\n";
 
       // PrintTag(account.tag, outStream);
 
       return;
 }
+
 void PrintHandlers::PrintExists(const std::string existsContext, std::ostream& outStream)
 {
       outStream << existsContext << " already exists\n";

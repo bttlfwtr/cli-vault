@@ -4,7 +4,7 @@ char InputHandlers::GetMenuChoice(std::istream& inStream)
 {
       PrintHandlers::PrintInputContext("choice: ", std::cout);
 
-      char menuChoice;
+      char menuChoice{};
       inStream >> menuChoice;
       // toupper returns int, typecast char to ignore conversion warning
       menuChoice = (char)toupper(menuChoice);
@@ -21,5 +21,23 @@ char InputHandlers::GetMenuChoice(std::istream& inStream)
 
 Account InputHandlers::GetAccountInput(std::istream& inStream)
 {
+      Account newAccount{};
+      PrintHandlers::PrintInputContext("domain: ", std::cout);
+      inStream >> newAccount.domain;
 
+      PrintHandlers::PrintInputContext("username: ", std::cout);
+      inStream >> newAccount.username;
+
+      PrintHandlers::PrintInputContext("password: ", std::cout);
+      inStream >> newAccount.password;
+
+      PrintHandlers::PrintInputContext("email: ", std::cout);
+      inStream >> newAccount.email;
+
+      PrintHandlers::PrintInputContext("description: ", std::cout);
+      std::getline(inStream, newAccount.description);
+
+      PrintHandlers::PrintInputContext("tag: ", std::cout);
+
+      return newAccount;
 }

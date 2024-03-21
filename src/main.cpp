@@ -7,7 +7,7 @@ int main()
       std::ios_base::sync_with_stdio(false);
       // std::cin.tie(nullptr);
 
-      PasswordManager pwManager;
+      PasswordManager pwManager{};
 
       std::cout << "terminating process...\n";
 

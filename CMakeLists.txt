@@ -18,9 +18,7 @@ file(GLOB project-sources
 )
 
 add_executable(cli-vault
-
           ${project-sources}
-
 )
 
 add_executable(test_stage

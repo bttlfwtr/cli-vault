@@ -18,7 +18,7 @@ void PasswordManager::RUN_CLI_VAULT()
             {
                   case 'A':
                         PrintHandlers::PrintMenuSelection("ADDED\n", std::cout);
-
+                        InputHandlers::GetAccountInput(std::cin);
 
                         break;
                   case 'S':
