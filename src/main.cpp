@@ -4,12 +4,12 @@
 // int argc, const char** argv
 int main()
 {
-          std::ios_base::sync_with_stdio(false);
-          // std::cin.tie(nullptr);
+      std::ios_base::sync_with_stdio(false);
+      // std::cin.tie(nullptr);
 
-          PasswordManager pwManager;
+      PasswordManager pwManager;
 
-          std::cout << "terminating process...\n";
+      std::cout << "terminating process...\n";
 
-          return 0;
+      return 0;
 }

@@ -1,19 +1,19 @@
 name: cli-vault-ci
 
 on:
-          push:
-                    branches: [ master ]
-          pull_request:
-                    branches: [ master ]
+push:
+      branches: [ master ]
+pull_request:
+      branches: [ master ]
 
 jobs:
-          build_tests:
-                    runs-on: ubuntu-latest
-                    steps:
-                              - uses: actions/checkout@v3
-                              - name: update submodules
-                                run: git submodule update --init --recursive
-                              - name: invoke cmake
-                                run: cmake --fresh .
-                              - name: invoke echo
-                                run: echo TODO finish editing workflow yml
+      build_tests:
+      runs-on: ubuntu-latest
+      steps:
+            - uses: actions/checkout@v3
+            - name: update submodules
+            run: git submodule update --init --recursive
+            - name: invoke cmake
+            run: cmake --fresh .
+            - name: invoke echo
+            run: echo TODO finish editing workflow yml

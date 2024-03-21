@@ -1,8 +1,8 @@
 /**
  * @file ChronoBenchmark.hpp
- * @brief chrono benchmark class utilizing RAII
- * @version 1.0
- * @date 2022-02-11
+ * @brief chrono benchmark class using RAII
+ * @version 1.01
+ * @date 2024-02-11
  */
 
 #ifndef ChronoBenchmark_HPP
@@ -13,37 +13,35 @@
 
 class ChronoTimer
 {
-    public:
-        ChronoTimer()
-        {
-            timerStartPoint = std::chrono::high_resolution_clock::now();
-        }
+      public:
+            ChronoTimer()
+            {
+                  timerStartPoint = std::chrono::high_resolution_clock::now();
+            }
 
-        ~ChronoTimer()
-        {
-            Stop();
-        }
+            ~ChronoTimer()
+            {
+                  Stop();
+            }
 
-    // RAII
-    void Stop()
-    {
-        std::chrono::_V2::system_clock::time_point timerEndPoint{ std::chrono::high_resolution_clock::now() };
+      // RAII
+      void Stop()
+      {
+            std::chrono::_V2::system_clock::time_point timerEndPoint{std::chrono::high_resolution_clock::now()};
 
-        //                      int64_t
-        int64_t startMuS{ std::chrono::time_point_cast<std::chrono::microseconds>(timerStartPoint).time_since_epoch().count() };
-        int64_t endMuS{ std::chrono::time_point_cast<std::chrono::microseconds>(timerEndPoint).time_since_epoch().count() };
+            int64_t startMuS{std::chrono::time_point_cast<std::chrono::microseconds>(timerStartPoint).time_since_epoch().count()};
+            int64_t endMuS{std::chrono::time_point_cast<std::chrono::microseconds>(timerEndPoint).time_since_epoch().count()};
 
-        int64_t totalDurationMuS{ endMuS - startMuS };
+            int64_t totalDurationMuS{endMuS - startMuS};
 
-        // convert micro to milli    cast
-        double totalDurationMilli{ (double)totalDurationMuS * 0.001 };
+            // convert micro to milli cast
+            double totalDurationMilli{(double)totalDurationMuS * 0.001};
 
-        std::cout << totalDurationMilli << "milli\n";
-    }
+            std::cout << totalDurationMilli << " ms\n";
+      }
 
-    private:
-        std::chrono::time_point<std::chrono::high_resolution_clock> timerStartPoint;
-
+      private:
+            std::chrono::time_point<std::chrono::high_resolution_clock> timerStartPoint;
 };
 
 #endif

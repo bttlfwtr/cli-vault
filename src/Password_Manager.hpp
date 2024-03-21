@@ -7,10 +7,10 @@
 
 struct PasswordManager
 {
-          PasswordManager(){ RUN_CLI_VAULT(); }
-          ~PasswordManager(){}
+      PasswordManager(){ RUN_CLI_VAULT(); }
+      ~PasswordManager(){}
 
-          void RUN_CLI_VAULT();
+      void RUN_CLI_VAULT();
 };
 
 #endif
